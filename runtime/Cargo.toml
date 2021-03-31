@@ -18,6 +18,8 @@ codec = { default-features = false, features = ['derive'], package = 'parity-sca
 hex-literal = { optional = true, version = '0.3.1' }
 serde = { version = "1.0.119", optional = true, features = ["derive"] }
 pallet-nicks = { default-features = false, version = '3.0.0' }
+pallet-scheduler = { default-features = false, version = '3.0.0' }
+pallet-node-authorization = { default-features = false, version = '3.0.0' }
 
 # Substrate dependencies
 frame-benchmarking = { default-features = false, optional = true, version = '3.0.0' }
@@ -62,6 +64,7 @@ runtime-benchmarks = [
     'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
     'sp-runtime/runtime-benchmarks',
+    'pallet-node-authorization/std',
 ]
 std = [
     'codec/std',
@@ -90,4 +93,5 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'pallet-scheduler/std',
 ]
